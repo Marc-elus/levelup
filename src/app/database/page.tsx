@@ -1,7 +1,7 @@
 import { MongoClient, ServerApiVersion } from 'mongodb'
 
     
-const uri = process.env.MONGO_URI
+const uri = process.env.MONGO_URL
 if(!uri){
     throw new Error("environment variable MONGODB_URI is not defined");
 }
