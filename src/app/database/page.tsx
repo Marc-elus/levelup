@@ -1,3 +1,4 @@
+import { log } from 'console';
 import { MongoClient, ServerApiVersion } from 'mongodb'
 
     
@@ -22,6 +23,7 @@ async function run() {
     // Querying our database
     const cursor = await client.db("test").collection("greetings").find();
     const array = await cursor.toArray()
+    console.log("arre", array)
     return array;
   } finally {
     // Ensures that the client will close when you finish/error
@@ -31,6 +33,7 @@ async function run() {
 }
 export default async function Database() {
     const greetings =  await run();
+    console.log ("greeting",greetings)
     return (<>
         {greetings.map(greetingObj=> <h1 key={greetingObj._id.toString()}>{greetingObj.greeting}</h1>)}
     </>)
