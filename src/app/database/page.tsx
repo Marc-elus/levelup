@@ -35,3 +35,4 @@ export default async function Database() {
         {greetings.map(greetingObj=> <h1 key={greetingObj._id.toString()}>{greetingObj.greeting}</h1>)}
     </>)
   }
+  
