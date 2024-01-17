@@ -25,7 +25,7 @@ async function run() {
     return array;
   } finally {
     // Ensures that the client will close when you finish/error
-    await client.close();
+    //await client.close();
   }
 
 }
